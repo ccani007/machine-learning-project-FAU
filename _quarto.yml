@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Machine Learning Notes!"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About Me
+      - text: Models
+        menu:
+          - href: models/logistic.qmd
+            text: Logistic Regression
+          - href: models/lasso.qmd
+            text: Lasso Regression
+          - href: models/trees.qmd
+            text: Decision Trees
+          - href: models/random-forest.qmd
+            text: Random Forest
+          - href: models/knn.qmd
+            text: K-Nearest Neighbors
+      - href: datasets.qmd
+        text: YRBS 2023 Dataset
+
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+
+

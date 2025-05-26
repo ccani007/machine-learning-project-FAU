@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Machine Learning Course Portfolio"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - section: "Models"
+        contents:
+          - href: models/logistic.qmd
+            text: Logistic Regression
+          - href: models/lasso.qmd
+            text: Lasso Regression
+          - href: models/trees.qmd
+            text: Decision Trees
+          - href: models/random-forest.qmd
+            text: Random Forest
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true          
+      - href: models/knn.qmd
+        text: K-Nearest Neighbors
+      - href: datasets.qmd
+        text: YRBS 2023 Dataset
+      - href: notes.qmd
+        text: Course Notes
+
+

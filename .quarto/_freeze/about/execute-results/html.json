@@ -1,0 +1,17 @@
+{
+  "hash": "92d259d8f1d46a95eb18ee82f4ec7f36",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"About\"\n---\n\n\n\n\n\n## About the Course\n\nThis Machine Learning course is designed to provide students with hands-on experience in implementing various statistical and machine learning models using R and the `tidymodels` framework. We'll be working with the Youth Risk Behavior Survey (YRBS) 2023 dataset to explore real-world applications of these models.\n\n### Course Objectives\n\n-   Understand fundamental machine learning concepts\n-   Implement various models using `tidymodels`\n-   Learn to evaluate and compare model performance\n-   Develop skills in data visualization and interpretation\n-   Create reproducible analyses and reports\n\n### Models Covered\n\n1.  **Logistic Regression**\n    -   Binary classification\n    -   Model interpretation\n    -   Performance metrics\n2.  **Lasso Regression**\n    -   Feature selection\n    -   Regularization\n    -   Model complexity\n3.  **Decision Trees**\n    -   Tree-based learning\n    -   Decision rules\n    -   Model visualization\n4.  **Random Forest**\n    -   Ensemble methods\n    -   Bagging\n    -   Feature importance\n5.  **K-Nearest Neighbors**\n    -   Distance metrics\n    -   Parameter tuning\n    -   Non-parametric learning\n\n### Tools and Technologies\n\n-   R programming language\n-   `tidymodels` framework\n-   `tidyverse` for data manipulation\n-   `ggplot2` for visualization\n-   Quarto for documentation\n\n### About the Instructor\n\n\\[Your Name\\] - \\[Your Title/Position\\] - \\[Your Department\\] - \\[Your Contact Information\\]\n\n### Course Resources\n\n-   \\[Link to course materials\\]\n-   \\[Link to dataset\\]\n-   \\[Additional resources\\]\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::",
+    "supporting": [
+      "about_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

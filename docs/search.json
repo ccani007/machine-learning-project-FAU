@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Machine Learning Notebook 👀",
+    "section": "",
+    "text": "This website will be our Machine Learning course, where we explore various statistical and machine learning models using the Youth Risk Behavior Survey (YRBS) 2023 dataset. Through this course, I learned to implement and understand different modeling techniques using the tidymodels framework in R.\n\nWhat You’ll Find Here\n\nAbout Me: A little bit about me and my research interests.\nThe Dataset: Information about my primary dataset and the research question I am trying to answer.\nModel Implementations: Hands-on examples of different models to answer the question:\n\nLogistic Regression\nLasso Regression\nDecision Trees\nRandom Forest\nK-Nearest Neighbors (KNN)"
+  },
+  {
+    "objectID": "index.html#welcome-to-our-machine-learning-journey",
+    "href": "index.html#welcome-to-our-machine-learning-journey",
+    "title": "Machine Learning Course Portfolio",
+    "section": "",
+    "text": "This website serves as a comprehensive portfolio of our Machine Learning course, where we explore various statistical and machine learning models using the Youth Risk Behavior Survey (YRBS) 2023 dataset. Through this course, we’ll learn to implement and understand different modeling techniques using the tidymodels framework in R.\n\n\n\nCourse Notes: Detailed explanations of concepts and methodologies\nModel Implementations: Hands-on examples of different models:\n\nLogistic Regression\nLasso Regression\nDecision Trees\nRandom Forest\nK-Nearest Neighbors (KNN)\n\nYRBS 2023 Dataset: Information about our primary dataset\nInteractive Visualizations: Results and insights from our models\n\n\n\n\nNavigate through the different sections using the menu above. Each model section contains: - Model explanation - Implementation code - Results and interpretations - Visualizations - Key takeaways\nFeel free to explore and learn!\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "datasets.html",
+    "href": "datasets.html",
+    "title": "YRBS 2023 Dataset",
+    "section": "",
+    "text": "The Youth Risk Behavior Survey (YRBS) is a national survey that monitors health-related behaviors among high school students. The 2023 dataset provides valuable insights into various aspects of youth health and behavior.\n\n\n\nSource: Centers for Disease Control and Prevention (CDC)\nYear: 2023\nTarget Population: High school students\nSample Size: [Add sample size]\nGeographic Coverage: [Add coverage information]\n\n\n\n\nThe dataset includes information on various health-related behaviors:\n\nDemographic Variables\n\nAge\nGender\nRace/Ethnicity\nGrade level\n\nHealth Behaviors\n\nPhysical activity\nNutrition\nSleep patterns\nSubstance use\n\nMental Health\n\nStress levels\nDepression\nAnxiety\nSuicidal thoughts\n\nRisk Behaviors\n\nTobacco use\nAlcohol consumption\nDrug use\nSexual behavior\n\n\n\n\n\n\n\n\n[Add a detailed data dictionary here]\n\n\n\n\nMissing Values: [Add information about missing values]\nData Cleaning: [Add information about data cleaning steps]\nOutliers: [Add information about outlier treatment]\n\n\n\n\nThis dataset will be used throughout the course to demonstrate various machine learning models:\n\nLogistic Regression: [Add specific use case]\nLasso Regression: [Add specific use case]\nDecision Trees: [Add specific use case]\nRandom Forest: [Add specific use case]\nK-Nearest Neighbors: [Add specific use case]\n\n\n\n\n\n[Add CDC YRBS documentation link]\n[Add additional relevant references]"
+  },
+  {
+    "objectID": "datasets.html#youth-risk-behavior-survey-yrbs-2023",
+    "href": "datasets.html#youth-risk-behavior-survey-yrbs-2023",
+    "title": "YRBS 2023 Dataset",
+    "section": "",
+    "text": "The Youth Risk Behavior Survey (YRBS) is a national survey that monitors health-related behaviors among high school students. The 2023 dataset provides valuable insights into various aspects of youth health and behavior.\n\n\n\nSource: Centers for Disease Control and Prevention (CDC)\nYear: 2023\nTarget Population: High school students\nSample Size: [Add sample size]\nGeographic Coverage: [Add coverage information]\n\n\n\n\nThe dataset includes information on various health-related behaviors:\n\nDemographic Variables\n\nAge\nGender\nRace/Ethnicity\nGrade level\n\nHealth Behaviors\n\nPhysical activity\nNutrition\nSleep patterns\nSubstance use\n\nMental Health\n\nStress levels\nDepression\nAnxiety\nSuicidal thoughts\n\nRisk Behaviors\n\nTobacco use\nAlcohol consumption\nDrug use\nSexual behavior\n\n\n\n\n\n\n\n\n[Add a detailed data dictionary here]\n\n\n\n\nMissing Values: [Add information about missing values]\nData Cleaning: [Add information about data cleaning steps]\nOutliers: [Add information about outlier treatment]\n\n\n\n\nThis dataset will be used throughout the course to demonstrate various machine learning models:\n\nLogistic Regression: [Add specific use case]\nLasso Regression: [Add specific use case]\nDecision Trees: [Add specific use case]\nRandom Forest: [Add specific use case]\nK-Nearest Neighbors: [Add specific use case]\n\n\n\n\n\n[Add CDC YRBS documentation link]\n[Add additional relevant references]"
+  },
+  {
+    "objectID": "models/logistic.html",
+    "href": "models/logistic.html",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "Logistic regression is a statistical model that…\n\nModel Overview\nLogistic regression is used when the dependent variable is binary (0/1, Yes/No, True/False). The model estimates the probability of the dependent variable being 1 given the independent variables.\n\n\nImplementation\n\nlibrary(tidymodels)\nlibrary(tidyverse)\nlibrary(dissertationData)\n\n# Load and prepare the YRBS 2023 dataset\n\n\n\nRecipe\n\n\nModel Specification\n\n\nFit the model\n\n\nModel Evaluation\n\n# Evaluate the model\n# [Add your model evaluation code here]\n\n\n\nResults and Interpretation\n\n\nVisualizations\n\n# Add your visualizations here\n\n\n\nKey Takeaways\n\n\nReferences"
+  },
+  {
+    "objectID": "models/logistic.html#logistic-regression",
+    "href": "models/logistic.html#logistic-regression",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "Logistic regression is a statistical model that…\n\n\nLogistic regression is used when the dependent variable is binary (0/1, Yes/No, True/False). The model estimates the probability of the dependent variable being 1 given the independent variables.\n\n\n\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.3.0 ──\n\n\n✔ broom        1.0.8     ✔ recipes      1.3.0\n✔ dials        1.4.0     ✔ rsample      1.3.0\n✔ dplyr        1.1.4     ✔ tibble       3.2.1\n✔ ggplot2      3.5.2     ✔ tidyr        1.3.1\n✔ infer        1.0.8     ✔ tune         1.3.0\n✔ modeldata    1.4.0     ✔ workflows    1.2.0\n✔ parsnip      1.3.1     ✔ workflowsets 1.1.0\n✔ purrr        1.0.4     ✔ yardstick    1.3.2\n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ purrr::discard() masks scales::discard()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\n✖ recipes::step()  masks stats::step()\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ lubridate 1.9.4     ✔ stringr   1.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ readr::col_factor() masks scales::col_factor()\n✖ purrr::discard()    masks scales::discard()\n✖ dplyr::filter()     masks stats::filter()\n✖ stringr::fixed()    masks recipes::fixed()\n✖ dplyr::lag()        masks stats::lag()\n✖ readr::spec()       masks yardstick::spec()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(dissertationData)\n\n# Load and prepare the YRBS 2023 dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Evaluate the model\n# [Add your model evaluation code here]\n\n\n\n\n\n\n\n\n# Add your visualizations here"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am Catalina Canizares\nI am a researcher dedicated to preventing suicidal behaviors in adolescents. Currently, I am a postdoctoral researcher at NYU Steinhardt School of Culture, Education, and Human Development. My work spans several projects, including intervention programs for preventing suicide attempts and developing data structures to deepen our understanding of adolescent suicide attempts and ideation.\nI am deeply invested in data science, applying machine learning techniques to reveal insights and patterns in suicide-related data. As a primary user of R, I am committed to sharing my knowledge and experiences with the broader community.\nI am also dedicated to ensuring clarity and reproducibility in my work, using tools like Quarto and RMarkdown. This approach ensures that my research is trustworthy and easily followed by others.\nIf I could describe myself using three emojis I would select: 🏝🇨🇴🐈"
+  },
+  {
+    "objectID": "about.html#about-the-course",
+    "href": "about.html#about-the-course",
+    "title": "About",
+    "section": "",
+    "text": "This Machine Learning course is designed to provide students with hands-on experience in implementing various statistical and machine learning models using R and the tidymodels framework. We’ll be working with the Youth Risk Behavior Survey (YRBS) 2023 dataset to explore real-world applications of these models.\n\n\n\nUnderstand fundamental machine learning concepts\nImplement various models using tidymodels\nLearn to evaluate and compare model performance\nDevelop skills in data visualization and interpretation\nCreate reproducible analyses and reports\n\n\n\n\n\nLogistic Regression\n\nBinary classification\nModel interpretation\nPerformance metrics\n\nLasso Regression\n\nFeature selection\nRegularization\nModel complexity\n\nDecision Trees\n\nTree-based learning\nDecision rules\nModel visualization\n\nRandom Forest\n\nEnsemble methods\nBagging\nFeature importance\n\nK-Nearest Neighbors\n\nDistance metrics\nParameter tuning\nNon-parametric learning\n\n\n\n\n\n\nR programming language\ntidymodels framework\ntidyverse for data manipulation\nggplot2 for visualization\nQuarto for documentation\n\n\n\n\n[Your Name] - [Your Title/Position] - [Your Department] - [Your Contact Information]\n\n\n\n\n[Link to course materials]\n[Link to dataset]\n[Additional resources]\n\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "models/lasso.html",
+    "href": "models/lasso.html",
+    "title": "Lasso Regression",
+    "section": "",
+    "text": "Lasso regression is a statistical model that…"
+  },
+  {
+    "objectID": "models/lasso.html#lasso-regression",
+    "href": "models/lasso.html#lasso-regression",
+    "title": "Lasso Regression",
+    "section": "",
+    "text": "Lasso regression is a statistical model that…"
+  }
+]

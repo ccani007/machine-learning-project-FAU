@@ -1,0 +1,15 @@
+{
+  "hash": "c8f4045c74d30c3b0df7d5c506bceb8f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Machine Learning Course Portfolio\"\n---\n\n\n\n\n\n## Welcome to Our Machine Learning Journey!\n\nThis website serves as a comprehensive portfolio of our Machine Learning course, where we explore various statistical and machine learning models using the Youth Risk Behavior Survey (YRBS) 2023 dataset. Through this course, we'll learn to implement and understand different modeling techniques using the `tidymodels` framework in R.\n\n### What You'll Find Here\n\n-   **Course Notes**: Detailed explanations of concepts and methodologies\n-   **Model Implementations**: Hands-on examples of different models:\n    -   Logistic Regression\n    -   Lasso Regression\n    -   Decision Trees\n    -   Random Forest\n    -   K-Nearest Neighbors (KNN)\n-   **YRBS 2023 Dataset**: Information about our primary dataset\n-   **Interactive Visualizations**: Results and insights from our models\n\n### Getting Started\n\nNavigate through the different sections using the menu above. Each model section contains: - Model explanation - Implementation code - Results and interpretations - Visualizations - Key takeaways\n\nFeel free to explore and learn!\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

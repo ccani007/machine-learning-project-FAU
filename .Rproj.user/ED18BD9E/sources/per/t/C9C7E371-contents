@@ -1,0 +1,29 @@
+---
+title: "Machine Learning Course Portfolio"
+---
+
+## Welcome to Our Machine Learning Journey!
+
+This website serves as a comprehensive portfolio of our Machine Learning course, where we explore various statistical and machine learning models using the Youth Risk Behavior Survey (YRBS) 2023 dataset. Through this course, we'll learn to implement and understand different modeling techniques using the `tidymodels` framework in R.
+
+### What You'll Find Here
+
+-   **Course Notes**: Detailed explanations of concepts and methodologies
+-   **Model Implementations**: Hands-on examples of different models:
+    -   Logistic Regression
+    -   Lasso Regression
+    -   Decision Trees
+    -   Random Forest
+    -   K-Nearest Neighbors (KNN)
+-   **YRBS 2023 Dataset**: Information about our primary dataset
+-   **Interactive Visualizations**: Results and insights from our models
+
+### Getting Started
+
+Navigate through the different sections using the menu above. Each model section contains: - Model explanation - Implementation code - Results and interpretations - Visualizations - Key takeaways
+
+Feel free to explore and learn!
+
+```{r}
+1 + 1
+```

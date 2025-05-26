@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "c4b78d64"
+  },
+  "about.qmd": {
+    "about.html": "6e268aa7"
+  },
+  "models/logistic.qmd": {
+    "logistic.html": "dd5819fa"
+  },
+  "datasets.qmd": {
+    "datasets.html": "923fbaed"
+  },
+  "models/lasso.qmd": {
+    "lasso.html": "416299c5"
+  }
+}

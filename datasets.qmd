@@ -1,0 +1,76 @@
+---
+title: "YRBS 2023 Dataset"
+---
+
+## Youth Risk Behavior Survey (YRBS) 2023
+
+The Youth Risk Behavior Survey (YRBS) is a national survey that monitors health-related behaviors among high school students. The 2023 dataset provides valuable insights into various aspects of youth health and behavior.
+
+### Dataset Overview
+
+-   **Source**: Centers for Disease Control and Prevention (CDC)
+-   **Year**: 2023
+-   **Target Population**: High school students
+-   **Sample Size**: \[Add sample size\]
+-   **Geographic Coverage**: \[Add coverage information\]
+
+### Key Variables
+
+The dataset includes information on various health-related behaviors:
+
+1.  **Demographic Variables**
+    -   Age
+    -   Gender
+    -   Race/Ethnicity
+    -   Grade level
+2.  **Health Behaviors**
+    -   Physical activity
+    -   Nutrition
+    -   Sleep patterns
+    -   Substance use
+3.  **Mental Health**
+    -   Stress levels
+    -   Depression
+    -   Anxiety
+    -   Suicidal thoughts
+4.  **Risk Behaviors**
+    -   Tobacco use
+    -   Alcohol consumption
+    -   Drug use
+    -   Sexual behavior
+
+### Data Preprocessing
+
+```{r}
+#| label: data-prep
+#| include: false
+
+library(tidyverse)
+
+# Add your data preprocessing code here
+```
+
+### Data Dictionary
+
+\[Add a detailed data dictionary here\]
+
+### Data Quality
+
+-   **Missing Values**: \[Add information about missing values\]
+-   **Data Cleaning**: \[Add information about data cleaning steps\]
+-   **Outliers**: \[Add information about outlier treatment\]
+
+### Usage in Course
+
+This dataset will be used throughout the course to demonstrate various machine learning models:
+
+1.  **Logistic Regression**: \[Add specific use case\]
+2.  **Lasso Regression**: \[Add specific use case\]
+3.  **Decision Trees**: \[Add specific use case\]
+4.  **Random Forest**: \[Add specific use case\]
+5.  **K-Nearest Neighbors**: \[Add specific use case\]
+
+### References
+
+-   \[Add CDC YRBS documentation link\]
+-   \[Add additional relevant references\]

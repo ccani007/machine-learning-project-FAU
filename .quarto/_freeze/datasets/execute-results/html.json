@@ -1,0 +1,15 @@
+{
+  "hash": "bddd38f6c739fc3e5197cc250e3df22b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"YRBS 2023 Dataset\"\n---\n\n\n\n\n\n## Youth Risk Behavior Survey (YRBS) 2023\n\nThe Youth Risk Behavior Survey (YRBS) is a national survey that monitors health-related behaviors among high school students. The 2023 dataset provides valuable insights into various aspects of youth health and behavior.\n\n### Dataset Overview\n\n-   **Source**: Centers for Disease Control and Prevention (CDC)\n-   **Year**: 2023\n-   **Target Population**: High school students\n-   **Sample Size**: \\[Add sample size\\]\n-   **Geographic Coverage**: \\[Add coverage information\\]\n\n### Key Variables\n\nThe dataset includes information on various health-related behaviors:\n\n1.  **Demographic Variables**\n    -   Age\n    -   Gender\n    -   Race/Ethnicity\n    -   Grade level\n2.  **Health Behaviors**\n    -   Physical activity\n    -   Nutrition\n    -   Sleep patterns\n    -   Substance use\n3.  **Mental Health**\n    -   Stress levels\n    -   Depression\n    -   Anxiety\n    -   Suicidal thoughts\n4.  **Risk Behaviors**\n    -   Tobacco use\n    -   Alcohol consumption\n    -   Drug use\n    -   Sexual behavior\n\n### Data Preprocessing\n\n\n\n\n\n\n\n\n\n\n\n### Data Dictionary\n\n\\[Add a detailed data dictionary here\\]\n\n### Data Quality\n\n-   **Missing Values**: \\[Add information about missing values\\]\n-   **Data Cleaning**: \\[Add information about data cleaning steps\\]\n-   **Outliers**: \\[Add information about outlier treatment\\]\n\n### Usage in Course\n\nThis dataset will be used throughout the course to demonstrate various machine learning models:\n\n1.  **Logistic Regression**: \\[Add specific use case\\]\n2.  **Lasso Regression**: \\[Add specific use case\\]\n3.  **Decision Trees**: \\[Add specific use case\\]\n4.  **Random Forest**: \\[Add specific use case\\]\n5.  **K-Nearest Neighbors**: \\[Add specific use case\\]\n\n### References\n\n-   \\[Add CDC YRBS documentation link\\]\n-   \\[Add additional relevant references\\]",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
