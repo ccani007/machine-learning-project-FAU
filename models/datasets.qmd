@@ -38,6 +38,7 @@ The dataset includes information on various health-related behaviors:
 
 ```{r}
 #| label: data-prep
+#| output: false
 
 library(tidyverse)
 library(tidymodels)
@@ -49,6 +50,7 @@ data(clean_yrbs_2023)
 
 ### Exploratory Data Analysis
 
+*We will do it in class...*
 ```{r}
 #| label: eda
 
@@ -65,21 +67,27 @@ data(clean_yrbs_2023)
 
 
 analysis_data <- clean_yrbs_2023 %>%
-    select(WeaponCarryingSchool, AttackedInNeighborhood, Bullying, 
-           SexualAbuseByOlderPerson, ParentalPhysicalAbuse, ParentSubstanceUse, 
-           ParentIncarceration, SchoolConnectedness, ParentalMonitoring, 
-           UnfairDisciplineAtSchool, Homelessness) |>
-    filter(!is.na(WeaponCarryingSchool)) %>% 
+    select(
+        WeaponCarryingSchool, AttackedInNeighborhood, Bullying,
+        SexualAbuseByOlderPerson, ParentalPhysicalAbuse, ParentSubstanceUse,
+        ParentIncarceration, SchoolConnectedness, ParentalMonitoring,
+        UnfairDisciplineAtSchool, Homelessness
+    ) |>
+    filter(!is.na(WeaponCarryingSchool)) %>%
     mutate(across(
-          c(ParentSubstanceUse, ParentIncarceration, SchoolConnectedness,
-            ParentalMonitoring, UnfairDisciplineAtSchool),
-          ~ as.numeric(.x) - 1
-          )) %>% 
-  mutate(across(
-    c(ParentSubstanceUse, ParentIncarceration, SchoolConnectedness,
-      ParentalMonitoring, UnfairDisciplineAtSchool),
-    ~ factor(.x)
-  ))
+        c(
+            ParentSubstanceUse, ParentIncarceration, SchoolConnectedness,
+            ParentalMonitoring, UnfairDisciplineAtSchool
+        ),
+        ~ as.numeric(.x) - 1
+    )) %>%
+    mutate(across(
+        c(
+            ParentSubstanceUse, ParentIncarceration, SchoolConnectedness,
+            ParentalMonitoring, UnfairDisciplineAtSchool
+        ),
+        ~ factor(.x)
+    ))
 
 
 

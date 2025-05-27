@@ -6,7 +6,7 @@ project:
     - data/
 
 website:
-  title: "Machine Learning Course Portfolio"
+  title: "Machine Learning Notes"
   navbar:
     left:
       - href: index.qmd

@@ -142,7 +142,8 @@ roc_plot_training
 ```{r}
 #| label: visualizations
 
-tidy_model %>% 
+tidy_model |> 
+  filter(term != "(Intercept)") |> 
   ggplot(aes(x = estimate, y = reorder(term, estimate))) +
   geom_point(size = 3) +
   geom_errorbarh(aes(xmin = conf.low, xmax = conf.high), height = 0.2) +
@@ -166,8 +167,4 @@ tidy_model %>%
 
 
 ### Key Takeaways
-
-
-
-### References
 
