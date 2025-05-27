@@ -41,31 +41,39 @@ analysis_folds <- readRDS(here("models", "data", "analysis_folds.rds"))
 ```{r}
 #| label: model-rec
 
-mental_health_recipe <- 
-  recipe(formula = NotGoodMentalHealth ~ ., data = analysis_train) |>
-  step_zv(all_predictors()) |> 
+weapon_carry_recipe <- 
+  recipe(formula = WeaponCarryingSchool ~ ., data = analysis_data) |>
   step_impute_mode(all_nominal_predictors()) |>
   step_impute_mean(all_numeric_predictors()) |>
-  step_corr(all_numeric_predictors(), threshold = 0.7) |> 
-  step_dummy(all_nominal_predictors()) 
+  step_zv(all_predictors()) |> 
+  step_corr(all_numeric_predictors(), threshold = 0.7) 
 
-mental_health_recipe
+weapon_carry_recipe
 
 
 ```
+
+### Bake 
+
+```{r}
+rec <- weapon_carry_recipe %>% 
+  prep() %>% 
+  bake(new_data = analysis_data) %>% glimpse()
+```
+
+
 
 ### Model Specification
 
 ```{r}
 #| label: model-spec
 
-mental_health_spec <- 
+weapon_carry_spec <- 
   logistic_reg() %>% 
   set_mode("classification") %>% 
   set_engine("glm") 
 
-mental_health_spec
-
+weapon_carry_spec
 ```
 
 ### Workflow
@@ -73,12 +81,12 @@ mental_health_spec
 ```{r}
 #| label: model-workflow
 
-mental_health_workflow <- workflow() %>%
-  add_recipe(mental_health_recipe) %>%
-  add_model(mental_health_spec)
+weapon_carry_workflow <- workflow() %>%
+  add_recipe(weapon_carry_recipe) %>%
+  add_model(weapon_carry_spec)
 
 
-mental_health_workflow
+weapon_carry_workflow
 
 ```
 
@@ -86,7 +94,7 @@ mental_health_workflow
 ```{r}
 #| label: model-fit
 mod_1 <- 
-  fit(mental_health_workflow, data = analysis_train) 
+  fit(weapon_carry_workflow, data = analysis_train) 
 
 mod_1
 
@@ -108,14 +116,24 @@ tidy_model
 
 ### Model Evaluation
 
-```{r}
-#| label: model-evaluation
 
-# Evaluate the model
-# [Add your model evaluation code here]
+```{r}
+weapon_pred <- 
+  augment(mod_1, analysis_train) |> 
+  select(WeaponCarryingSchool, .pred_class, .pred_1, .pred_0)
+
+weapon_pred
 ```
 
-### Results and Interpretation
+
+```{r}
+roc_plot_training <- 
+  weapon_pred |> 
+  roc_curve(truth = WeaponCarryingSchool, .pred_1, event_level = "second") |> 
+  autoplot()
+
+roc_plot_training 
+```
 
 
 
@@ -124,8 +142,18 @@ tidy_model
 ```{r}
 #| label: visualizations
 
+
+tidy_model %>% 
+  ggplot(aes(x = estimate, y = term)) +
+  geom_line()
+
 # Add your visualizations here
 ```
+
+
+### Results and Interpretation
+
+
 
 ### Key Takeaways
 
