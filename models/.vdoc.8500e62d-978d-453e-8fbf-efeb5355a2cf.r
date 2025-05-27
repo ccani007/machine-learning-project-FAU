@@ -1,17 +1,17 @@
----
-title: "Logistic Regression"
----
-
-
-Logistic regression is a statistical model that...
-
-### Model Overview
-
-Logistic regression is used when the dependent variable is binary (0/1, Yes/No, True/False). The model estimates the probability of the dependent variable being 1 given the independent variables.
-
-### Implementation
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: setup
 #| output: false
 
@@ -22,12 +22,12 @@ library(here)
 
 # Load and prepare the YRBS 2023 dataset
 
-```
-
-
-### Load the data
-
-```{r}
+#
+#
+#
+#
+#
+#
 #| label: load-data
 
 analysis_data <- readRDS(here("models", "data", "analysis_data.rds"))
@@ -36,9 +36,9 @@ analysis_test <- readRDS(here("models", "data", "analysis_test.rds"))
 analysis_folds <- readRDS(here("models", "data", "analysis_folds.rds"))
 
 ```
-### Recipe
-
-```{r}
+#
+#
+#
 #| label: model-rec
 
 mental_health_recipe <- 
@@ -52,11 +52,11 @@ mental_health_recipe <-
 mental_health_recipe
 
 
-```
-
-### Model Specification
-
-```{r}
+#
+#
+#
+#
+#
 #| label: model-spec
 
 mental_health_spec <- 
@@ -66,11 +66,11 @@ mental_health_spec <-
 
 mental_health_spec
 
-```
-
-### Workflow
-
-```{r}
+#
+#
+#
+#
+#
 #| label: model-workflow
 
 mental_health_workflow <- workflow() %>%
@@ -80,19 +80,19 @@ mental_health_workflow <- workflow() %>%
 
 mental_health_workflow
 
-```
-
-
-```{r}
+#
+#
+#
+#
 #| label: model-fit
 mod_1 <- 
   fit(mental_health_workflow, data = analysis_train) 
 
 mod_1
 
-```
-
-```{r}
+#
+#
+#
 #| label: tidy-model
 
 tidy_model <- 
@@ -104,32 +104,41 @@ tidy_model <-
 
 tidy_model
 
-```
-
-### Model Evaluation
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: model-evaluation
 
 # Evaluate the model
 # [Add your model evaluation code here]
-```
-
-### Results and Interpretation
-
-
-
-### Visualizations
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: visualizations
 
 # Add your visualizations here
-```
-
-### Key Takeaways
-
-
-
-### References
-
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

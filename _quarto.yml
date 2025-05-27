@@ -1,17 +1,22 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - R/
+    - data/
 
 website:
-  title: "Machine Learning Notes!"
+  title: "Machine Learning Course Portfolio"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About Me
+        text: About
       - text: Models
         menu:
+          - href: models/datasets.qmd
+            text: Data and Research Question
           - href: models/logistic.qmd
             text: Logistic Regression
           - href: models/lasso.qmd
@@ -22,8 +27,6 @@ website:
             text: Random Forest
           - href: models/knn.qmd
             text: K-Nearest Neighbors
-      - href: datasets.qmd
-        text: YRBS 2023 Dataset
 
 
 format:

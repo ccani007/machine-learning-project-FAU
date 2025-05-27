@@ -13,5 +13,8 @@
   },
   "models/lasso.qmd": {
     "lasso.html": "416299c5"
+  },
+  "models/datasets.qmd": {
+    "datasets.html": "6dbdfa1d"
   }
 }

@@ -4,3 +4,113 @@ title: "Lasso Regression"
 
 Lasso regression is a statistical model that...
 
+
+### Load the data
+
+```{r}
+#| label: load-data
+
+analysis_data <- readRDS(here("models", "data", "analysis_data.rds"))
+analysis_train <- readRDS(here("models", "data", "analysis_train.rds"))
+analysis_test <- readRDS(here("models", "data", "analysis_test.rds"))
+analysis_folds <- readRDS(here("models", "data", "analysis_folds.rds"))
+
+```
+### Recipe
+
+```{r}
+#| label: model-rec
+
+mental_health_recipe <- 
+  recipe(formula = NotGoodMentalHealth ~ ., data = analysis_train) |>
+  step_zv(all_predictors()) |> 
+  step_impute_mode(all_nominal_predictors()) |>
+  step_impute_mean(all_numeric_predictors()) |>
+  step_corr(all_numeric_predictors(), threshold = 0.7) |> 
+  step_dummy(all_nominal_predictors()) 
+
+mental_health_recipe
+
+
+```
+
+### Model Specification
+
+```{r}
+#| label: model-spec
+
+mental_health_spec <- 
+  linear_reg(penalty = tune(), mixture = 1) %>% 
+  set_mode("regression") %>% 
+  set_engine("glmnet") 
+
+mental_health_spec
+
+```
+
+### Workflow
+
+```{r}
+#| label: model-workflow
+
+mental_health_workflow <-
+  workflow() |>
+  add_recipe(mental_health_recipe) |>
+  add_model(mental_health_spec)
+
+
+mental_health_workflow
+
+```
+
+
+```{r}
+#| label: model-fit
+mod_1 <- 
+  fit(mental_health_workflow, data = analysis_train) 
+
+mod_1
+
+```
+
+```{r}
+#| label: tidy-model
+
+tidy_model <- 
+  mod_1 |>
+  tidy(exponentiate = TRUE,
+       conf.int = TRUE, 
+       conf.level = .95) |>
+  mutate(p.value = scales::pvalue(p.value))
+
+tidy_model
+
+```
+
+### Model Evaluation
+
+```{r}
+#| label: model-evaluation
+
+# Evaluate the model
+# [Add your model evaluation code here]
+```
+
+### Results and Interpretation
+
+
+
+### Visualizations
+
+```{r}
+#| label: visualizations
+
+# Add your visualizations here
+```
+
+### Key Takeaways
+
+
+
+### References
+

@@ -1,0 +1,115 @@
+---
+title: "Data and Research Question"
+---
+
+## Youth Risk Behavior Survey 2023
+
+The Youth Risk Behavior Survey (YRBS) is a...
+
+### Dataset Overview
+
+-   **Source**: Centers for Disease Control and Prevention (CDC)
+-   **Year**: 2023
+-   **Target Population**: High school students
+-   **Sample Size**: \[Add sample size\]
+
+### Key Variables for the Research Question
+
+The dataset includes information on various health-related behaviors:
+
+1.  **Demographic Variables**
+    -   ...
+    -   ...
+    -   ...
+2.  **Outcome**
+    -   ...
+    -   ...
+    -   ...
+    -   ...
+3.  **Predictors**
+    -   ...
+    -   ...
+    -   ...
+    -   ...
+
+### Data Preprocessing
+
+```{r}
+#| label: data-prep
+
+library(tidyverse)
+library(dissertationData)
+library(here)
+data(clean_yrbs_2023)
+# Add your data preprocessing code here
+```
+
+### Exploratory Data Analysis
+
+```{r}
+#| label: eda
+
+```
+
+### Creation of the Dataset
+
+```{r}
+#| label: create-dataset
+
+# This is an example of how to create a dataset for a model.
+# You can use this as a template to create your own dataset.
+
+
+analysis_data <- clean_yrbs_2023 %>%
+    select(Homelessness, NotGoodMentalHealth, GradesSchool, SocialMedia, Sex, Age, Race, ) |>
+    filter(!is.na(NotGoodMentalHealth)) |>
+    mutate(
+        Homelessness = as.factor(Homelessness),
+        NotGoodMentalHealth = as.factor(NotGoodMentalHealth),
+        GradesSchool = as.factor(GradesSchool),
+        SocialMedia = as.factor(SocialMedia),
+        Sex = as.factor(Sex)
+    )
+
+# This is extremly important to save the dataset in the models folder!
+# Without this, the model will not be able to find the dataset.
+
+saveRDS(analysis_data, here::here("models", "data", "analysis_data.rds"))
+
+```
+
+### Splitting the Dataset
+
+```{r}
+#| label: split-dataset
+#| include: false
+
+set.seed(1990)
+
+analysis_split <- initial_split(analysis_data,
+    strata = NotGoodMentalHealth
+)
+
+analysis_train <- training(analysis_split)
+analysis_test <- testing(analysis_split)
+
+analysis_split
+
+saveRDS(analysis_train, here::here("models", "data", "analysis_train.rds"))
+saveRDS(analysis_test, here::here("models", "data", "analysis_test.rds"))
+
+```
+
+### Cross-Validation
+
+```{r}
+#| label: cross-validation
+#| include: false
+
+analysis_folds <- vfold_cv(analysis_train,
+    v = 5
+)
+analysis_folds
+
+saveRDS(analysis_folds, here::here("models", "data", "analysis_folds.rds"))
+```
